@@ -191,6 +191,16 @@ nav {
     transform: scale(1.05);
 }
 
+/* banner-adds */
+#banner-adds {
+    padding: 0 3rem 3rem;
+    text-align: center;
+}
+/* #banner-adds .container-banner-adds {
+    display: flex;
+    justify-content: center;
+} */
+
 /* special-price */
 #special-price {
     padding: 0 3rem 5rem;
