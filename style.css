@@ -15,6 +15,9 @@
 .font-rubik {
     font-family: "Rubik", cursive;
 }
+.font-baloo {
+    font-family: "Baloo Thambi 2", cursive;
+}
 
 .color-primary {
     color: #003859;
@@ -113,8 +116,14 @@ nav {
     padding: 4rem 3rem 5rem;
     box-sizing: border-box;
 }
-.container-top-sale h4 {
+
+.container-top-sale,
+.container-special-price {
     font-size: 20px;
+}
+.container-top-sale h4,
+.container-special-price h4 {
+    font-size: 1em;
     margin-bottom: 10px;
     font-weight: 200;
 }
@@ -127,8 +136,10 @@ nav {
 
 #top-sale .card {
     display: flex;
+    /* fle */
     box-sizing: border-box;
     width: 100%;
+    /* max-width: ; */
 }
 
 #top-sale .card .item {
@@ -151,7 +162,7 @@ nav {
 }
 
 #top-sale .card .item .item-info h6 {
-    font-size: 1rem;
+    font-size: 1em;
     font-weight: 400;
     color: rgba(0, 0, 0, .75);
 }
@@ -162,7 +173,8 @@ nav {
     margin-bottom: 5px;
 }
 
-#top-sale .card .item .item-info .btn-add-to-cart {
+#top-sale .card .item .item-info .btn-add-to-cart,
+#special-price .grid .grid-item .item-info .btn-add-to-cart {
     padding: 8px;
     border: none;
     border-radius: 5px;
@@ -172,8 +184,83 @@ nav {
     transition: transform .5s ease;
 }
 
-#top-sale .card .item .item-info .btn-add-to-cart:hover{
+#top-sale .card .item .item-info .btn-add-to-cart:hover,
+#special-price .grid .grid-item .item-info .btn-add-to-cart:hover{
     background: #a77d00;
     color: rgb(48, 48, 48);
     transform: scale(1.05);
+}
+
+/* special-price */
+#special-price {
+    padding: 0 3rem 5rem;
+}
+#special-price .container-special-price {
+    display: flex;
+    box-sizing: border-box;
+    justify-content: space-between;
+    
+}
+
+#special-price .container-special-price .category {
+    flex: .3;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 20px;
+}
+
+#special-price .container-special-price .category .btn {
+    border: none;
+    font-size: .8em;
+    background-color: #fff;
+}
+
+/* special-price grid */
+#special-price .container-special-price {
+    font-size: 1rem;
+}
+#special-price .container-special-price h4 {
+    font-size: 1.3em;
+    margin-bottom: 30px;
+}
+#special-price .container-special-price .category .btn {
+    font-size: .8em;
+}
+#special-price .grid {
+    /* width: 100%; */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    row-gap: 10px;
+    column-gap: 10px;
+}
+
+#special-price .grid .grid-item{
+    width: 100%;
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, .1);
+    box-sizing: border-box;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#special-price .grid .grid-item h6 {
+    font-size: 1em;
+    font-weight: 200;
+    color: rgba(0, 0, 0, .75);
+    margin-bottom: 5px;
+}
+#special-price .grid .grid-item .item-info > .item-rating, .item-price {
+    margin: 5px 0;
+}
+
+#special-price .grid .grid-item .item-info .btn-add-to-cart {
+    margin-top: 10px;
+    border: none;
+}
+
+
+#special-price .grid .grid-item a img{
+    object-fit: contain;
+    width: 100%;
+    /* height: auto; */
 }
