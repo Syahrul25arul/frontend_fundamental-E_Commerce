@@ -375,3 +375,24 @@ nav {
 #footer .account .info-account > a:hover {
     color: rgba(255, 255, 255, 0.857);
 }
+
+/* copy right */
+.copyright {
+    text-align: center;
+    height: 50px;
+    line-height: 40px;
+    background-color: #343A40;
+    color:white;
+}
+
+.copyright p {
+    font-size: .89em;
+}
+
+.copyright p a {
+    text-decoration: none;
+}
+
+.copyright p a:hover {
+    color : #147B66;
+}
