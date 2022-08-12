@@ -274,3 +274,104 @@ nav {
     width: 100%;
     /* height: auto; */
 }
+
+/* footer */
+#footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    background-color: #343A40;
+    height: 200px;
+    box-sizing: border-box;
+    /* text-align: center; */
+    padding: 2rem 4rem;
+    column-gap: 30px;
+    font-size: 1rem;
+}
+
+#footer > .footer-about, .information, .newslatter, .account {
+    color: white;
+}
+#footer > .footer-about h4, .newslatter h4, .information > h4, .account h4 {
+    font-size: 1.3em;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+#footer .footer-about p {
+    color: rgba(255, 255, 255, 0.486);
+    font-size: .9em;
+    line-height: 1.6em;
+}
+
+#footer .newslatter form {
+    display: flex;
+    justify-content: space-between;
+}
+
+#footer .newslatter form input {
+    outline: none;
+    padding: 7px;
+    border-radius: 5px;
+    border: none;
+    margin-right: 4px;
+    
+}
+
+#footer .newslatter form input:focus{
+    border: 2px solid #318ae3;
+    padding: 5px;
+}
+
+#footer .newslatter form button {
+    padding: 6px;
+    border-radius: 5px;
+    background-color: #007BFF;
+    border: none;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+#footer .newslatter form button:hover {
+    background-color: #0064cf;
+    color: rgba(255, 255, 255, 0.654);
+}
+
+#footer .information {
+    padding-left: 20px;
+}
+
+#footer .information .info-link {
+    display: flex;
+    flex-direction: column;
+}
+
+#footer .information >  .info-link a {
+    font-size: .87em;
+    line-height: 1.5em;
+}
+
+#footer .information .info-link a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.486);
+}
+
+#footer .information .info-link a:hover {
+    color: rgba(255, 255, 255, 0.857);
+}
+
+#footer .account .info-account {
+    display: flex;
+    flex-direction: column;
+}
+
+#footer .account .info-account > a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.486);
+    font-size: .87em;
+    line-height: 1.5em;
+}
+
+#footer .account .info-account > a:hover {
+    color: rgba(255, 255, 255, 0.857);
+}
