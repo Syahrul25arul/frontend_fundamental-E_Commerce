@@ -667,3 +667,158 @@ nav {
     margin-top: 10px;
     
 }
+
+/* halaman cart */
+#cart {
+    padding: 1.5rem 8rem 0;
+    font-size: 20px;
+    box-sizing: border-box;
+}
+
+#cart h5 {
+    font-size: 1em;
+    font-weight: lighter;
+}
+
+#cart .garis-bawah {
+    border-top: 1px solid rgba(0, 0, 0, .2);
+    margin-top: 20px;
+    /* margin-bottom: 8px; */
+}
+
+#cart .container-cart {
+    display: flex;
+}
+#cart .container-cart .container-cart-all-items  {
+    flex: 1;
+    /* background-color: red; */
+}
+
+#cart .container-cart .container-cart-all-items .container-cart-items {
+    display: flex;
+    padding: 10px 0;
+}
+
+
+#cart .container-cart .container-cart-all-items .container-cart-items .cart-items-info {
+    flex: 1;
+    padding-left: 20px;
+}
+
+#cart .container-cart .container-cart-all-items .container-cart-items .cart-items-info h5 {
+    font-size: 1em;
+}
+
+#cart .container-cart .container-cart-all-items .container-cart-items .cart-items-info small {
+    font-size: .6em;
+    font-weight: lighter;
+}
+
+#cart .container-cart .container-cart-all-items .container-cart-items .cart-items-info .item-rating {
+    display: flex;
+    align-items: center;
+}
+
+#cart .container-cart .container-cart-all-items .container-cart-items .cart-items-info .item-rating .rating {
+    font-size: .6em;
+    margin-right: 8px;
+}
+
+#cart .container-cart .container-cart-all-items .container-cart-items .cart-items-info .item-rating a {
+    font-size: .7em;
+    text-decoration: none;
+}
+
+#cart .container-cart .container-cart-all-items .container-cart-items .cart-items-info .item-rating a:hover {
+    text-decoration: underline;
+}
+
+#cart .container-cart .container-cart-all-items .container-cart-items .cart-items-info .qty {
+    display: flex;
+}
+
+#cart .container-cart .container-cart-all-items .container-cart-items .cart-items-info .qty-button {
+    /* flex: .2; */
+    display: flex;
+    height: 30px;
+    
+}
+
+#cart .container-cart .container-cart-all-items .container-cart-items .cart-items-info .qty-button input {
+    /* flex: .4; */
+    width: 50%;
+    /* background-color: red; */
+}
+#cart .container-cart .container-cart-all-items .container-cart-items .cart-items-info .qty-button button{
+    padding: 0 8px;
+    /* border: none; */
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, .2);
+    cursor: pointer;
+}
+#cart .container-cart .container-cart-all-items .container-cart-items .cart-items-info .qty-button button:hover {
+    background-color: rgb(180, 176, 176);
+}
+
+#cart .container-cart .container-cart-all-items .container-cart-items .cart-items-info .qty > button {
+    border: none;
+    margin-left: -30px;
+    padding:5px 20px;
+    color: white;
+    border-radius: 5px;
+    background-color: #f84b5c;
+    cursor: pointer;
+}
+
+#cart .container-cart .container-cart-all-items .container-cart-items .cart-items-info .qty > button:hover {
+    background-color: #ea293c;
+}
+
+#cart .container-cart .container-cart-all-items .container-cart-items .cart-items-price {
+    /* background-color: red; */
+    padding-right: 20px;
+    color: red;
+}
+
+
+#cart .container-cart .sub-total {
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, .2);
+    box-sizing: border-box;
+    margin-left: 20px;
+    font-size: 16px;
+    height: fit-content;
+    padding-bottom: 20px;
+}
+
+#cart .container-cart .sub-total h6 {
+    color: #28A745;
+    padding: 30px 10px 20px;
+}
+
+#cart .container-cart .sub-total .sub-total-price {
+    border-top: 1px solid rgba(0, 0, 0, .1);
+    padding-top: 20px;
+    box-sizing: border-box;
+    width: 100%;
+    /* background-color: red; */
+}
+
+#cart .container-cart .sub-total .sub-total-price h5 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 1.2em;
+}
+
+#cart .container-cart .sub-total .sub-total-price h5 span {
+    color: red;
+}
+
+#cart .container-cart .sub-total .sub-total-price button {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 7px;
+    border: none;
+    background-color: #FFC107;
+}
