@@ -35,6 +35,6 @@ color: #FFC107;
 }
 
 .color-yellow-bg {
-background: #FFD289;
+background: #FFC107;
 }
 `;

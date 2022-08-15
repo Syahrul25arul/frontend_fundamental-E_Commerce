@@ -1,6 +1,7 @@
 import React from "react";
-import { ContainerCart, ContainerTopSale, Hr, Section } from "./TopSale.styles";
+import { ContainerCart, ContainerTopSale, Hr, Item, Section, Image } from "./TopSale.styles";
 import Cart from "../card_no_border";
+import Product from "../product_cart/";
 
 function index() {
 	return (
@@ -10,7 +11,21 @@ function index() {
 				<Hr />
 			</ContainerTopSale>
 			<ContainerCart>
-				<Cart></Cart>
+				<Cart>
+					<Product />
+				</Cart>
+				<Cart>
+					<Product />
+				</Cart>
+				<Cart>
+					<Product />
+				</Cart>
+				<Cart>
+					<Product />
+				</Cart>
+				<Cart>
+					<Product />
+				</Cart>
 			</ContainerCart>
 		</Section>
 	);
