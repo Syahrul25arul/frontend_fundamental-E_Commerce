@@ -38,7 +38,7 @@ function index() {
 						</CartItemsInfo>
 						<CartItemsPrice>
 							<div className="font-baloo">
-								$<span>152</span>
+								Rp.<span> 2,234,234</span>
 							</div>
 						</CartItemsPrice>
 					</ContainerItems>
