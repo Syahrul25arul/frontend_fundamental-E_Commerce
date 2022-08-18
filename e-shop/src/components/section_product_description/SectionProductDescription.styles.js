@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const SectionDescription = styled.section`
-	padding: 4rem 3rem 0;
+	padding: 1rem 1rem 0;
 
 	h6 {
 		font-size: 1.2em;
@@ -17,5 +17,9 @@ export const SectionDescription = styled.section`
 		font-size: 0.87em;
 		line-height: 3ch;
 		margin-top: 10px;
+	}
+
+	@media only screen and (min-width: 425px) {
+		padding: 4rem 3rem 0;
 	}
 `;

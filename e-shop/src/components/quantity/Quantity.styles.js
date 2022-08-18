@@ -15,6 +15,16 @@ export const Qty = styled.div`
 export const ContainerButtonQty = styled.div`
 	display: flex;
 	height: 30px;
+
+	input {
+		width: 30%;
+	}
+
+	@media only screen and (min-width: 425px) {
+		input {
+			width: unset;
+		}
+	}
 `;
 
 export const QtyButton = styled.button`

@@ -3,8 +3,8 @@ import styled from "styled-components";
 export const ProductInfo = styled.div`
 	flex: 0.5;
 	margin-top: 20px;
-	font-size: 20px;
-	margin-left: 20px;
+	font-size: 17px;
+	margin-left: 5px;
 
 	h5 {
 		font-size: 1.03em;
@@ -17,18 +17,34 @@ export const ProductInfo = styled.div`
 		color: rgba(0, 0, 0, 0.7);
 		margin-bottom: 3px;
 	}
+
+	@media only screen and (min-width: 1024px) {
+		font-size: 20px;
+		margin-left: 20px;
+	}
 `;
 
 export const ContainerItemRating = styled.div`
 	display: flex;
 	.item-rating {
 		font-size: 0.6em;
+		/* flex: 0.5; */
+		/* flex: 1; */
+		width: 65px;
 	}
 
 	a {
-		margin-left: 9px;
+		margin-top: -15px;
+		margin-left: 15px;
 		font-size: 0.7em;
 		text-decoration: none;
+	}
+
+	@media only screen and (min-width: 1024px) {
+		.item-rating {
+			/* flex: unset; */
+			width: max-content;
+		}
 	}
 `;
 
@@ -37,7 +53,8 @@ export const Hr = styled.hr`
 `;
 
 export const TableProduct = styled.table`
-	font-size: 15px;
+	font-size: 12px;
+	text-align: center;
 
 	tr {
 		font-size: 0.9em;
@@ -49,20 +66,27 @@ export const TableProduct = styled.table`
 	tr:nth-child(3) > td span {
 		margin-left: 5px;
 	}
+
+	@media only screen and (min-width: 1024px) {
+		font-size: 15px;
+	}
 `;
 
 export const PolicyInfo = styled.div`
 	display: flex;
 	margin-top: 20px;
 	margin-bottom: 10px;
-	margin-left: 5px;
 	font-size: 15px;
 	align-items: center;
 	text-align: center;
+
+	@media only screen and (min-width: 1024px) {
+		margin-left: 5px;
+	}
 `;
 
 export const PolicyInfoDetail = styled.div`
-	margin-right: 40px;
+	margin: 0 auto;
 
 	a {
 		font-size: 0.9em;
@@ -71,6 +95,10 @@ export const PolicyInfoDetail = styled.div`
 
 	a:hover {
 		text-decoration: underline;
+	}
+
+	@media only screen and (min-width: 1024px) {
+		margin-right: 40px;
 	}
 `;
 
@@ -103,12 +131,19 @@ export const ColorAndQuantity = styled.div`
 	width: 100%;
 	margin-top: 20px;
 	display: flex;
-	justify-content: space-between;
+	flex-direction: column;
+	justify-content: space-around;
+
+	@media only screen and (min-width: 1024px) {
+		flex-direction: row;
+		justify-content: space-between;
+	}
 `;
 
 export const Color = styled.div`
 	flex: 0.8;
 	display: flex;
+	margin-bottom: 8px;
 	/* justify-content: space-between; */
 	/* background-color: ; */
 
@@ -116,6 +151,10 @@ export const Color = styled.div`
 		font-size: 16px;
 		font-weight: lighter;
 		color: rgba(0, 0, 0, 0.7);
+	}
+
+	@media only screen and (min-width: 1024px) {
+		margin-bottom: 0;
 	}
 `;
 
@@ -129,6 +168,7 @@ export const Button = styled.button`
 	padding: 22px;
 	border: none;
 	border-radius: 80%;
+	/* width: 30%; */
 `;
 
 export const Size = styled.div`

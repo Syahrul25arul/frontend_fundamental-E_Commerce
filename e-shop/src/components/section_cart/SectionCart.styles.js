@@ -8,24 +8,21 @@ export const SectionCart = styled.section`
 		font-weight: lighter;
 	}
 
-	@media only screen and (min-width: 1024px) {
-		padding: 1.5rem 8rem 0;
-		font-size: 20px;
+	@media only screen and (min-width: 320px) {
+		padding: 1rem 0.5rem 0;
+		font-size: 14px;
 	}
-
-	@media only screen and (min-width: 768px) {
-		padding: 1.5rem 4rem 0;
-		font-size: 16px;
-	}
-
 	@media only screen and (min-width: 372px) {
 		padding: 1.5rem 2rem 0;
 		font-size: 16px;
 	}
-
-	@media only screen and (min-width: 320px) {
-		padding: 1rem 0.5rem 0;
-		font-size: 14px;
+	@media only screen and (min-width: 768px) {
+		padding: 1.5rem 4rem 0;
+		font-size: 16px;
+	}
+	@media only screen and (min-width: 1024px) {
+		padding: 1.5rem 8rem 0;
+		font-size: 20px;
 	}
 `;
 
