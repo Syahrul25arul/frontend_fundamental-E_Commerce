@@ -3,10 +3,15 @@ import { ImageProduct, ItemInfo, ItemPrice } from "./ProductCart.styles";
 import { products } from "../../Images";
 import ItemRating from "../items_rating";
 import { ButtonAddToCart } from "../button";
+import { useNavigate } from "react-router-dom";
 
-function index() {
+function Index() {
+	const navigate = useNavigate();
+	const toProductDetail = () => {
+		navigate("/product");
+	};
 	return (
-		<div>
+		<div onClick={toProductDetail}>
 			<a href="#">
 				<ImageProduct src={products["1.png"]} alt="image product" />
 			</a>
@@ -23,4 +28,4 @@ function index() {
 	);
 }
 
-export default index;
+export default Index;
