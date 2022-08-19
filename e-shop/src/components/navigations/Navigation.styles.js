@@ -11,7 +11,7 @@ export const NavbarContainer = styled.div`
 	margin: 0 10px;
 	height: 50px;
 
-	a {
+	.navbar-brand {
 		color: white;
 		text-decoration: none;
 	}
@@ -30,8 +30,10 @@ export const NavbarContainer = styled.div`
 `;
 
 export const NavbarPage = styled.div`
-	a {
+	.navlink {
 		margin-left: 10px;
+		color: white;
+		text-decoration: none;
 	}
 
 	@media only screen and (min-width: 320px) {

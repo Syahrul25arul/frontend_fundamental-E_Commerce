@@ -1,17 +1,24 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import { Nav, NavbarContainer, NavbarPage } from "./Navigation.styles";
 
 function index() {
 	return (
 		<Nav>
 			<NavbarContainer className="font-roboto">
-				<a href="#" className="navbar-brand">
+				<NavLink to="/" className="navbar-brand">
 					E - Shop
-				</a>
+				</NavLink>
 				<NavbarPage>
-					<a href="#">Category</a>
-					<a href="#">Product</a>
-					<a href="#">Cart</a>
+					<a to="#category" className="navlink">
+						Category
+					</a>
+					<NavLink to="/product" className={`navlink`}>
+						Product
+					</NavLink>
+					<NavLink to="/cart" className={`navlink`}>
+						Cart
+					</NavLink>
 				</NavbarPage>
 			</NavbarContainer>
 		</Nav>

@@ -38,7 +38,7 @@ export const HeaderLoginWhistlist = styled.div`
 	align-self: center;
 
 	.header-login {
-		margin-right: 5px;
+		margin-right: 10px;
 	}
 
 	a {
