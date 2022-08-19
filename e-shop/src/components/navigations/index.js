@@ -2,7 +2,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import { Nav, NavbarContainer, NavbarPage } from "./Navigation.styles";
 
-function index() {
+function index({ user }) {
 	return (
 		<Nav>
 			<NavbarContainer className="font-roboto">
@@ -16,9 +16,11 @@ function index() {
 					<NavLink to="/product" className={`navlink`}>
 						Product
 					</NavLink>
-					<NavLink to="/cart" className={`navlink`}>
-						Cart
-					</NavLink>
+					{user && (
+						<NavLink to="/cart" className={`navlink`}>
+							Cart
+						</NavLink>
+					)}
 				</NavbarPage>
 			</NavbarContainer>
 		</Nav>

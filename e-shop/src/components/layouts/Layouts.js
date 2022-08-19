@@ -16,7 +16,7 @@ function Layouts({ title, children }) {
 	return (
 		<div>
 			<Header user={user} logout={logout} />
-			<Navigation />
+			<Navigation user={user} />
 			<Main>{children}</Main>
 			<Footer />
 			<CopyRight />
