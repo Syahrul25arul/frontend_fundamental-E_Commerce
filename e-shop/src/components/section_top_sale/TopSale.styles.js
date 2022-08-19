@@ -3,6 +3,10 @@ import styled from "styled-components";
 export const Section = styled.section`
 	padding: 4rem 2rem 5rem;
 	box-sizing: border-box;
+
+	@media only screen and (max-width: 768px) {
+		padding: 2rem 2rem 5rem;
+	}
 `;
 
 export const ContainerTopSale = styled.div`

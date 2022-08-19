@@ -12,6 +12,7 @@ export const HeaderContainer = styled.div`
 	p {
 		color: rgb(173, 157, 157);
 		font-size: 12px;
+		margin-top: 12px;
 	}
 
 	@media only screen and (min-width: 320px) {

@@ -15,8 +15,8 @@ function Layouts({ title, children }) {
 	document.title = title;
 	return (
 		<div>
-			<Header user={user} logout={logout} />
-			<Navigation user={user} />
+			<Header />
+			<Navigation user={user} logout={logout} />
 			<Main>{children}</Main>
 			<Footer />
 			<CopyRight />

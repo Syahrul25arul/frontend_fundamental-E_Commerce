@@ -1,7 +1,8 @@
-import React from "react";
 import { signInWithEmailAndPassword, createUserWithEmailAndPassword, signOut } from "firebase/auth";
 import { auth } from "./index";
+import { useNavigate } from "react-router-dom";
 function useFirebaseHooks() {
+	const navigate = useNavigate();
 	const login = async ({ email, password }) => {
 		try {
 			await signInWithEmailAndPassword(auth, email, password);
@@ -24,6 +25,7 @@ function useFirebaseHooks() {
 	};
 	const logout = () => {
 		signOut(auth);
+		navigate("/login");
 	};
 	return { login, logout, register };
 }

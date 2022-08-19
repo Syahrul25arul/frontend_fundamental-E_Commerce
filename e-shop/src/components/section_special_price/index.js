@@ -5,7 +5,7 @@ import Product from "../product_cart";
 
 function index() {
 	return (
-		<Section>
+		<Section id="products">
 			<ContainerAllCategory>
 				<h4 className="font-rubik">Special Price</h4>
 				<ContainerCategory className="font-baloo">

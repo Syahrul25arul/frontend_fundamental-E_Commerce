@@ -34,6 +34,10 @@ export const NavbarPage = styled.div`
 		margin-left: 10px;
 		color: white;
 		text-decoration: none;
+		cursor: pointer;
+		:first {
+			margin-right: 5px;
+		}
 	}
 
 	@media only screen and (min-width: 320px) {
