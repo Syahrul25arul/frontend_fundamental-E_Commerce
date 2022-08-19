@@ -37,4 +37,33 @@ color: #FFC107;
 .color-yellow-bg {
 background: #FFC107;
 }
+
+.position-relative {
+	position: relative;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.width-100 {
+	width: 100%;
+}
+
+.font-bold {
+	font-weight: bold;
+}
+
+.background {
+	background: #fff;
+}
+
+.font-awesome {
+	font-family: "Font Awesome 5 Free";
+}
+
+.primary-gradient {
+	background: #ff522f;
+	background: linear-gradient(to right, #dd2476, #ff512f);
+}
 `;

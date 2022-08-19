@@ -5,7 +5,7 @@ function importAll(r) {
 	});
 	return images;
 }
-const bannner = importAll(require.context("./assets", false, /\.(png|jpe?g|svg)$/));
+const bannner = importAll(require.context("./assets", false, /\.(png|jpe?g|svg|jpg)$/));
 const products = importAll(require.context("./assets/products", false, /\.(png|jpe?g|svg)$/));
 const blog = importAll(require.context("./assets/blog", false, /\.(png|jpe?g|svg)$/));
 export { bannner, products, blog };

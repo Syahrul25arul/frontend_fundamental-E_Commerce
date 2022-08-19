@@ -10,6 +10,10 @@ export const Qty = styled.div`
 		font-size: 0.8em;
 		font-weight: lighter;
 	}
+
+	@media only screen and (min-width: 1024px) {
+		margin-left: 20px;
+	}
 `;
 
 export const ContainerButtonQty = styled.div`
@@ -23,6 +27,12 @@ export const ContainerButtonQty = styled.div`
 	@media only screen and (min-width: 425px) {
 		input {
 			width: unset;
+		}
+	}
+
+	@media only screen and (min-width: 1024px) {
+		input {
+			width: 30%;
 		}
 	}
 `;
