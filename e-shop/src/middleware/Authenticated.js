@@ -13,8 +13,6 @@ function Authenticated({ children }) {
 		if (!user) navigate("/login");
 	}, [user, navigate]);
 
-	console.log("auth", user);
-
 	if (!isLoggedIn)
 		return (
 			<div>

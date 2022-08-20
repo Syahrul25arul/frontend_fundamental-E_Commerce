@@ -189,11 +189,13 @@ export const ButtonCartDelete = styled.button`
 		width: 80px;
 		/* width: fit-content; */
 	}
-	@media only screen and (min-width: 1024px) {
+	/* @media only screen and (min-width: 1024px) {
 		margin-left: -30px;
 		width: auto;
 		margin-top: 0;
-	}
+		font-size: 10px;
+		padding: -10px;
+	} */
 `;
 
 export const CartItemsPrice = styled.div`

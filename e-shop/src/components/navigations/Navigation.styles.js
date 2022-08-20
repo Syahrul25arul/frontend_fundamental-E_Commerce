@@ -16,6 +16,10 @@ export const NavbarContainer = styled.div`
 		text-decoration: none;
 	}
 
+	.active {
+		font-weight: bold;
+	}
+
 	@media only screen and (min-width: 320px) {
 		> a {
 			font-size: 15px;

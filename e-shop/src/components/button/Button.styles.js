@@ -14,7 +14,7 @@ export const ButtonAddToCart = styled.button`
 		transform: scale(1.05);
 	}
 
-	@media only screen and (max-width: 397px) {
+	@media only screen and (max-width: 500px) {
 		padding: 5px;
 		font-size: 0.6em;
 	}

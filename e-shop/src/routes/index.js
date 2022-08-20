@@ -8,7 +8,7 @@ import Register from "../pages/Register";
 import Authenticated from "../middleware/Authenticated";
 import Guest from "../middleware/Guest";
 
-function index() {
+function index({ user }) {
 	return (
 		<BrowserRouter>
 			<Routes>

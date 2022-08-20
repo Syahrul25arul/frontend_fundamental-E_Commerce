@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Qty = styled.div`
 	display: flex;
-	justify-content: space-between;
+	/* justify-content: space-between; */
 	box-sizing: border-box;
 
 	h6 {
@@ -22,12 +22,6 @@ export const ContainerButtonQty = styled.div`
 
 	input {
 		width: 30%;
-	}
-
-	@media only screen and (min-width: 425px) {
-		input {
-			width: unset;
-		}
 	}
 
 	@media only screen and (min-width: 1024px) {

@@ -13,8 +13,6 @@ function Guest({ children }) {
 		if (user) navigate("/");
 	}, [user, navigate]);
 
-	console.log("guest", user);
-
 	if (!isLoggedIn)
 		return (
 			<div>

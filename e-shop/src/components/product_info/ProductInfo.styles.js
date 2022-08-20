@@ -115,7 +115,7 @@ export const OrderDetail = styled.div`
 	margin-top: 20px;
 	display: flex;
 	flex-direction: column;
-	font-size: 18px;
+	font-size: 15px;
 	line-height: 20px;
 
 	a {
@@ -124,6 +124,10 @@ export const OrderDetail = styled.div`
 
 	a:hover {
 		text-decoration: underline;
+	}
+
+	@media only screen and (min-width: 375px) {
+		font-size: 18px;
 	}
 `;
 
@@ -155,20 +159,32 @@ export const Color = styled.div`
 
 	@media only screen and (min-width: 1024px) {
 		margin-bottom: 0;
+		flex: 1;
 	}
 `;
 
 export const ColorButton = styled.div`
 	display: flex;
-	flex: 1;
-	justify-content: space-evenly;
+	flex: 0.7;
+	/* justify-content: space-around; */
+
+	@media only screen and (min-width: 1024px) {
+		flex: 1;
+		justify-content: space-evenly;
+	}
 `;
 
 export const Button = styled.button`
-	padding: 22px;
+	padding: 16px;
 	border: none;
 	border-radius: 80%;
+	margin: 0 5px;
 	/* width: 30%; */
+
+	@media only screen and (min-width: 1024px) {
+		padding: 22px;
+		margin: 0 2px;
+	}
 `;
 
 export const Size = styled.div`
@@ -189,12 +205,18 @@ export const ContainerSizeButton = styled.div`
 `;
 
 export const SizeButton = styled.button`
-	padding: 10px;
+	padding: 5px;
 	border: 1px solid rgba(0, 0, 0, 0.1);
 	background-color: #fff;
 	cursor: pointer;
+	font-size: 10px;
 
 	:hover {
 		background-color: rgb(223, 223, 223);
+	}
+
+	@media only screen and (min-width: 1024px) {
+		padding: 10px;
+		font-size: 10px;
 	}
 `;
