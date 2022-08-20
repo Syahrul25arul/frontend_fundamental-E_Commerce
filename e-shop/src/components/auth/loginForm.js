@@ -1,17 +1,11 @@
 import React, { useState } from "react";
-import { useAuthState } from "react-firebase-hooks/auth";
-import { auth } from "../../config/firebase";
-// import Error from "../Error";
+import Alert from "../alert";
 
-export default function LoginForm({ login }) {
-	// let {setEmail, setPassword, handlerSubmit, setErrorMessage} = props.loginDispatch
-	// let {email, password, errorMessage} = props.loginData
+export default function LoginForm({ login, alert, showAlert }) {
 	const [loginData, setLoginData] = useState({
 		email: "",
 		password: ""
 	});
-
-	const [user, loading, errorAuth] = useAuthState(auth);
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
@@ -33,6 +27,7 @@ export default function LoginForm({ login }) {
 
 	return (
 		<div className="col-sm-7 bg-color align-self-center">
+			{alert.show && <Alert {...alert} removeAlert={showAlert} />}
 			<div className="form-section">
 				<div className="title">
 					<h3>Sign into your account</h3>

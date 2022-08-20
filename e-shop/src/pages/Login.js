@@ -5,10 +5,11 @@ import useFirebaseHooks from "../config/firebase/useFirebaseHooks";
 import { auth } from "../config/firebase";
 
 function Login() {
-	const { login } = useFirebaseHooks(auth);
+	const { login, alert, showAlert } = useFirebaseHooks(auth);
+
 	return (
 		<BaseAuth>
-			<LoginForm login={login} />
+			<LoginForm login={login} alert={alert} showAlert={showAlert} />
 		</BaseAuth>
 	);
 }

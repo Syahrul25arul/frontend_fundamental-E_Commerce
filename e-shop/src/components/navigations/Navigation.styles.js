@@ -43,6 +43,10 @@ export const NavbarPage = styled.div`
 			margin-right: 5px;
 		}
 	}
+	button.navlink {
+		border: none;
+		background-color: unset;
+	}
 
 	@media only screen and (min-width: 320px) {
 		a {

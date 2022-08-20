@@ -4,10 +4,10 @@ import RegisterForm from "../components/auth/RegisterForm";
 import useFirebaseHooks from "../config/firebase/useFirebaseHooks";
 
 function Register() {
-	const { register } = useFirebaseHooks();
+	const { register, alert, showAlert } = useFirebaseHooks();
 	return (
 		<BaseAuth>
-			<RegisterForm register={register} />
+			<RegisterForm register={register} alert={alert} showAlert={showAlert} />
 		</BaseAuth>
 	);
 }

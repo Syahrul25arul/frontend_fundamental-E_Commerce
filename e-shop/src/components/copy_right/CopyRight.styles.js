@@ -11,11 +11,14 @@ export const CopyRight = styled.div`
 		font-size: 0.89em;
 	}
 
-	a {
+	button {
 		text-decoration: none;
+		border: none;
+		padding: 0;
+		background-color: unset;
 	}
 
-	a:hover {
+	button:hover {
 		color: #147b66;
 	}
 

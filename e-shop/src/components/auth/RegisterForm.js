@@ -1,6 +1,7 @@
 import React, { useState } from "react";
+import Alert from "../alert";
 
-export default function RegisterForm({ register }) {
+export default function RegisterForm({ register, alert, showAlert }) {
 	// let {setUsername, setEmail, setPassword, setPasswordCheck, handlerSubmit} = props.registerDispatch
 	// let {username, email, passwordCheck, password} = props.registerData
 	const [registerData, setRegisterData] = useState({
@@ -32,6 +33,7 @@ export default function RegisterForm({ register }) {
 
 	return (
 		<div className="col-sm-7 bg-color align-self-center">
+			{alert.show && <Alert {...alert} removeAlert={showAlert} />}
 			<div className="form-section">
 				<div className="title">
 					<h3>Create a new account</h3>

@@ -5,7 +5,7 @@ function index() {
 	return (
 		<Header>
 			<HeaderContainer>
-				<p class="font-rale">Jln. Kenanga terusan, 0822-xxxx-xxxx</p>
+				<p className="font-rale">Jln. Kenanga terusan, 0822-xxxx-xxxx</p>
 				<HeaderLoginWhistlist></HeaderLoginWhistlist>
 			</HeaderContainer>
 		</Header>

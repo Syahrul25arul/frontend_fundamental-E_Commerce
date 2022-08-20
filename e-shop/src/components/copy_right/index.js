@@ -4,11 +4,8 @@ import { CopyRight } from "./CopyRight.styles";
 function index() {
 	return (
 		<CopyRight>
-			<p class="font-rale">
-				&copy; Copyrights 2022. Desing By{" "}
-				<a href="#" class="color-second">
-					Celerates
-				</a>
+			<p className="font-rale">
+				&copy; Copyrights 2022. Desing By <button className="color-second">Celerates</button>
 			</p>
 		</CopyRight>
 	);

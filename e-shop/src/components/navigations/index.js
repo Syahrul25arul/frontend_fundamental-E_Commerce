@@ -27,17 +27,17 @@ function Index({ user, logout }) {
 						</NavLink>
 					)}
 					{user && (
-						<a onClick={handleLogout} className={`navlink`}>
+						<button onClick={handleLogout} className={`navlink`}>
 							Logout
-						</a>
+						</button>
 					)}
 
 					{user && (
 						<NavLink to="/cart" className={`navlink`}>
-							<span class="font-size-16 px-2 text-white">
-								<i class="fas fa-shopping-cart"></i>
+							<span className="font-size-16 px-2 text-white">
+								<i className="fas fa-shopping-cart"></i>
 							</span>
-							<span class="px-3 py-2 rounded-pill text-dark bg-light">0</span>
+							<span className="px-3 py-2 rounded-pill text-dark bg-light">0</span>
 						</NavLink>
 					)}
 				</NavbarPage>
