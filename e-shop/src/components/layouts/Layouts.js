@@ -8,6 +8,7 @@ import { GlobalStyle } from "../../GlobalStyle";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { auth } from "../../config/firebase";
 import useFirebaseHooks from "../../config/firebase/useFirebaseHooks";
+import NavbarHamburger from "../navbarHamburger";
 
 function Layouts({ title, children }) {
 	const [user] = useAuthState(auth);
@@ -17,6 +18,7 @@ function Layouts({ title, children }) {
 		<div>
 			<Header />
 			<Navigation user={user} logout={logout} />
+			{/* <NavbarHamburger /> */}
 			<Main>{children}</Main>
 			<Footer />
 			<CopyRight />
