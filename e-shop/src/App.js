@@ -1,18 +1,17 @@
-import { useAuthState } from "react-firebase-hooks/auth";
 import "./App.css";
-import { auth } from "./config/firebase";
+import { useUserHooks } from "./hooks/useUserHooks";
+
 import Router from "./routes";
 
 function App() {
-	const [user, loading] = useAuthState(auth);
-
-	if (loading)
+	const { mounted } = useUserHooks();
+	if (mounted)
 		return (
 			<div>
 				<h5>Loading...</h5>
 			</div>
 		);
-	return <Router user={user} />;
+	return <Router />;
 }
 
 export default App;

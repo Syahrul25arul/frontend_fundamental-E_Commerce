@@ -1,7 +1,6 @@
 import React from "react";
 import { DetailButton, ProductDetail, ProductImage } from "./ProductDetail.styles";
 import { products } from "../../Images";
-import ItemRating from "../items_rating";
 import { ButtonAddToCartDetail, ButtonProcedToBuyDetail } from "../button";
 
 function index() {

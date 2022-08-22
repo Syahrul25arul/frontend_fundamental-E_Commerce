@@ -1,17 +1,18 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { useAuthState } from "react-firebase-hooks/auth";
-import { auth } from "../config/firebase";
+import { useSelector } from "react-redux";
+import { selectUser } from "../container/userSlice";
 
 function Authenticated({ children }) {
-	const [user] = useAuthState(auth);
+	const userStore = useSelector(selectUser);
+	// const [user] = useAuthState(auth);
 	const [isLoggedIn, setIsLoggedIn] = useState(false);
 	const navigate = useNavigate();
 
 	useEffect(() => {
 		setIsLoggedIn(true);
-		if (!user) navigate("/login");
-	}, [user, navigate]);
+		if (!userStore.loggedIn) navigate("/login");
+	}, [userStore.loggedIn, navigate]);
 
 	if (!isLoggedIn)
 		return (
