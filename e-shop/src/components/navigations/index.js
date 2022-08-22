@@ -1,15 +1,26 @@
 import React from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import { Nav, NavbarContainer, NavbarPage } from "./Navigation.styles";
-import { Link } from "react-scroll";
+import { Link, Element, animateScroll } from "react-scroll";
+import { useLocation } from "react-router-dom";
+// import * as ReactScroll from "react-scroll";
 
 function Index({ user, logout }) {
 	const navigate = useNavigate();
+	const location = useLocation();
 	const handleLogout = async (e) => {
 		e.preventDefault();
 		await logout();
 		navigate("/login");
 	};
+
+	const scrollToProducts = () => {
+		if (location.pathname !== "/") {
+			navigate("/");
+			animateScroll.scrollTo(1200);
+		}
+	};
+
 	return (
 		<Nav>
 			<NavbarContainer className="font-roboto">
@@ -17,7 +28,7 @@ function Index({ user, logout }) {
 					E - Shop
 				</NavLink>
 				<NavbarPage>
-					<Link to="products" spy={true} smooth={true} offset={-20} duration={500} className={`navlink`}>
+					<Link to="products" spy={true} smooth={true} offset={-20} duration={500} className={`navlink`} onClick={scrollToProducts}>
 						Products
 					</Link>
 
