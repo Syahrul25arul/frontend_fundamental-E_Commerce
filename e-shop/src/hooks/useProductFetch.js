@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import api from "../api";
 
 export const useProducts = () => {
@@ -19,21 +19,21 @@ export const useProducts = () => {
 	return [isLoading, data, getAllProduct];
 };
 
-// export const useDetailProducts = () => {
-// 	const [isLoading, setIsLoading] = useState(false);
-// 	const [data, setData] = useState([]);
+export const useDetailProducts = () => {
+	const [isLoading, setIsLoading] = useState(false);
+	const [data, setData] = useState([]);
 
-// 	const getProductDetail = async (id) => {
-// 		try {
-// 			setIsLoading(true);
-// 			const res = await api.getById(id);
-// 			setData(res.data);
-// 		} catch (err) {
-// 			console.log(err);
-// 		} finally {
-// 			setIsLoading(false);
-// 		}
-// 	};
+	const getProductDetail = async (id) => {
+		try {
+			setIsLoading(true);
+			const res = await api.getById(id);
+			setData(res.data);
+		} catch (err) {
+			console.log(err);
+		} finally {
+			setIsLoading(false);
+		}
+	};
 
-// 	return [isLoading, data, getProductDetail];
-// };
+	return [isLoading, data, getProductDetail];
+};

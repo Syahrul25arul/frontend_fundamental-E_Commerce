@@ -12,12 +12,12 @@ function Home() {
 		if (data.length < 1) {
 			getAllProduct(1, 12, "", "");
 		}
-	}, []);
+	}, [data.length, getAllProduct]);
 
 	return (
 		<Layouts title={`Home`}>
 			<SectionBanner />
-			{/* <SectionTopSale /> */}
+			<SectionTopSale products={data} loading={isLoading} />
 			<SectionBannerAdds />
 			<SectionAllProduct products={data} loading={isLoading} />
 		</Layouts>

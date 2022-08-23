@@ -29,7 +29,7 @@ function index() {
 						</Guest>
 					}
 				/>
-				<Route path="product" element={<ProductDetail />} />
+				<Route path="products/:id" element={<ProductDetail />} />
 				<Route
 					path="cart"
 					element={

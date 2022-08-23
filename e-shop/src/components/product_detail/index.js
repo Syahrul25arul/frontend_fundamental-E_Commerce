@@ -3,10 +3,10 @@ import { DetailButton, ProductDetail, ProductImage } from "./ProductDetail.style
 import { products } from "../../Images";
 import { ButtonAddToCartDetail, ButtonProcedToBuyDetail } from "../button";
 
-function index() {
+function index({ image }) {
 	return (
 		<ProductDetail>
-			<ProductImage src={products["1.png"]} />
+			<ProductImage src={products[image]} />
 			<DetailButton>
 				<ButtonProcedToBuyDetail className={`btn`}>Proceed to Buy</ButtonProcedToBuyDetail>
 				<ButtonAddToCartDetail className={`btn`}>Add to Cart</ButtonAddToCartDetail>

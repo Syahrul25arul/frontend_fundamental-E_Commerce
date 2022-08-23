@@ -23,6 +23,27 @@ export const GlobalStyle = createGlobalStyle`
   background: #003859;
 }
 
+.color-teal-bg {
+  background: #003859;
+}
+
+.color-white-bg {
+	background : #bac4c9;
+}
+.color-blue-bg {
+background: #00A5C4;
+}
+.color-black-bg {
+background: #1d1e1e;
+}
+.color-orange-bg {
+background: #e97f22;
+}
+
+.color-brown-bg {
+background: #aa4502;
+}
+
 .color-second {
 color: #00A5C4;
 }

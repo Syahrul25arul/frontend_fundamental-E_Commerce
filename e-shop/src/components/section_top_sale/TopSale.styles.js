@@ -23,7 +23,7 @@ export const ContainerCart = styled.div`
 	display: grid;
 	/* fle */
 	box-sizing: border-box;
-	width: 100%;
+	/* width: 100%; */
 	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 
 	@media only screen and (max-width: 645px) {

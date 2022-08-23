@@ -1,5 +1,10 @@
 import styled from "styled-components";
 
+export const Button = styled.button`
+	border: none;
+	background: unset;
+`;
+
 export const ImageProduct = styled.img`
 	object-fit: contain;
 	width: 100%;

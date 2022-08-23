@@ -1,20 +1,20 @@
 import React from "react";
-import { ImageProduct, ItemInfo, ItemPrice } from "./ProductCart.styles";
+import { Button, ImageProduct, ItemInfo, ItemPrice } from "./ProductCart.styles";
 import { products } from "../../Images";
 import ItemRating from "../items_rating";
 import { ButtonAddToCart } from "../button";
 import { useNavigate } from "react-router-dom";
 
-function Index({ product_name, price, image, rating }) {
+function Index({ product_name, price, image, rating, id }) {
 	const navigate = useNavigate();
 	const toProductDetail = () => {
-		navigate("/product");
+		navigate(`/products/${id}`);
 	};
 	return (
 		<div onClick={toProductDetail}>
-			<a href="#">
+			<Button>
 				<ImageProduct src={products[image]} alt={product_name} />
-			</a>
+			</Button>
 			<ItemInfo>
 				<h6>{product_name}</h6>
 				<ItemRating className="item-rating" rating={rating} />

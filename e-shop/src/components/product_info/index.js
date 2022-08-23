@@ -1,40 +1,51 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Button, Color, ColorAndQuantity, ColorButton, ContainerItemRating, ContainerSizeButton, Hr, OrderDetail, PolicyIcon, PolicyInfo, PolicyInfoDetail, ProductInfo, Size, SizeButton, TableProduct } from "./ProductInfo.styles";
 import ItemRating from "../items_rating";
 import Qty from "../quantity";
 
-function index() {
-	return (
+function Index({ loading, product_name, produsen, number_ratings, rating, answered_quetions, mrp, price, color, size, save, id }) {
+	useEffect(() => {
+		window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+	}, [id]);
+	return loading ? (
+		<div className="loading">
+			<h5>Loading...</h5>
+		</div>
+	) : (
 		<ProductInfo>
-			<h5 className="font-baloo">Samsung Galaxy 10</h5>
-			<small>by Samsung</small>
+			<h5 className="font-baloo">{product_name}</h5>
+			<small>by {produsen}</small>
 			<ContainerItemRating>
-				<ItemRating className={`item-rating`} />
+				<ItemRating className={`item-rating`} rating={rating} />
 				<a href="#" className="px-2 font-rale font-size-14">
-					20,534 ratings | 1000+ answered questions
+					{number_ratings} ratings | {answered_quetions > 9999 ? "9999" : answered_quetions}+ answered questions
 				</a>
 			</ContainerItemRating>
 			<Hr />
 			<TableProduct>
-				<tr className="font-rale">
-					<td>M.R.P:</td>
-					<td>
-						<span> Rp. 3.800.000</span>
-					</td>
-				</tr>
-				<tr className="font-rale">
-					<td>Deal Price:</td>
-					<td>
-						Rp.<span> 3.500.000</span>
-						<small>&nbsp;&nbsp;Sudah termasuk pajak</small>
-					</td>
-				</tr>
-				<tr className="font-rale">
-					<td>You Save:</td>
-					<td>
-						<span> Rp. 300.000</span>
-					</td>
-				</tr>
+				<thead>
+					<tr className="font-rale">
+						<td>M.R.P:</td>
+						<td>
+							<span> $ {mrp}</span>
+						</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr className="font-rale">
+						<td>Deal Price:&nbsp;</td>
+						<td>
+							$<span>{price}</span>
+							<small>&nbsp;&nbsp;Sudah termasuk pajak</small>
+						</td>
+					</tr>
+					<tr className="font-rale">
+						<td>You Save:&nbsp;</td>
+						<td>
+							<span> $ {save}</span>
+						</td>
+					</tr>
+				</tbody>
 			</TableProduct>
 			<PolicyInfo>
 				<PolicyInfoDetail>
@@ -69,33 +80,33 @@ function index() {
 			<OrderDetail className="font-rale">
 				<small>Delivery by : Mar 29 - Apr 1</small>
 				<small>
-					Sold by <a href="#">CAP Shop </a>(4.5 out of 5 | 18,198 ratings)
+					Sold by <a href="#">CAP Shop </a>({rating} out of 5 | 18,198 ratings)
 				</small>
 				<small>
-					<i class="fas fa-map-marker-alt color-primary"></i>&nbsp;&nbsp;Deliver to Customer - 424201
+					<i className="fas fa-map-marker-alt color-primary"></i>&nbsp;&nbsp;Deliver to Customer - 424201
 				</small>
 			</OrderDetail>
 			<ColorAndQuantity>
 				<Color>
 					<h6 className="font-baloo">Color:</h6>
 					<ColorButton>
-						<Button className="color-yellow-bg"></Button>
-						<Button className="color-primary-bg"></Button>
-						<Button className="color-second-bg"></Button>
+						{color?.map((c, i) => (
+							<Button key={i} className={`color-${c}-bg`}></Button>
+						))}
 					</ColorButton>
 				</Color>
 				<Qty />
 			</ColorAndQuantity>
 			<Size>
-				<h6 class="font-baloo">Size :</h6>
+				<h6 className="font-baloo">Size :</h6>
 				<ContainerSizeButton className="font-rubik">
-					<SizeButton>4GB RAM</SizeButton>
-					<SizeButton>6GB RAM</SizeButton>
-					<SizeButton>8GB RAM</SizeButton>
+					{size?.map((s, i) => (
+						<SizeButton key={i}>{s}GB RAM</SizeButton>
+					))}
 				</ContainerSizeButton>
 			</Size>
 		</ProductInfo>
 	);
 }
 
-export default index;
+export default Index;
