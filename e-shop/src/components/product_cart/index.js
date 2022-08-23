@@ -5,7 +5,7 @@ import ItemRating from "../items_rating";
 import { ButtonAddToCart } from "../button";
 import { useNavigate } from "react-router-dom";
 
-function Index() {
+function Index({ product_name, price, image, rating }) {
 	const navigate = useNavigate();
 	const toProductDetail = () => {
 		navigate("/product");
@@ -13,13 +13,13 @@ function Index() {
 	return (
 		<div onClick={toProductDetail}>
 			<a href="#">
-				<ImageProduct src={products["1.png"]} alt="image product" />
+				<ImageProduct src={products[image]} alt={product_name} />
 			</a>
 			<ItemInfo>
-				<h6>Samsung Galaxy 10</h6>
-				<ItemRating className="item-rating" />
+				<h6>{product_name}</h6>
+				<ItemRating className="item-rating" rating={rating} />
 				<ItemPrice className="item-price">
-					<span>Rp. 3,200,000</span>
+					<span>Rp. {price}</span>
 				</ItemPrice>
 
 				<ButtonAddToCart className={`btn-add-to-cart`}>Add to cart</ButtonAddToCart>

@@ -1,0 +1,225 @@
+[
+    {
+        "product_name": "Samsung Galaxy S6",
+        "price": "276.00",
+        "rating": 3,
+        "number_ratings": 38290,
+        "color": [
+            "black",
+            "teal"
+        ],
+        "produsen": "samsung",
+        "top_sale": true,
+        "answered_quetions": 86023,
+        "size": [
+            2
+        ],
+        "image": "1.png",
+        "id": "1"
+    },
+    {
+        "product_name": "samsung J5 Prime",
+        "price": "14.00",
+        "rating": 2,
+        "number_ratings": 96029,
+        "color": [
+            "teal",
+            "white"
+        ],
+        "produsen": "samsung",
+        "top_sale": false,
+        "answered_quetions": 70756,
+        "size": [
+            2,
+            4
+        ],
+        "image": "2.png",
+        "id": "2"
+    },
+    {
+        "product_name": "Redmi Note 5",
+        "price": "214.00",
+        "rating": 4,
+        "number_ratings": 67577,
+        "color": [
+            "blue",
+            "white"
+        ],
+        "produsen": "redmi",
+        "top_sale": false,
+        "answered_quetions": 24614,
+        "size": [
+            2
+        ],
+        "image": "3.png",
+        "id": "3"
+    },
+    {
+        "product_name": "Redmi Note 6",
+        "price": "327.00",
+        "rating": 4,
+        "number_ratings": 70529,
+        "color": [
+            "white",
+            "black"
+        ],
+        "produsen": "redmi",
+        "top_sale": false,
+        "answered_quetions": 42701,
+        "size": [
+            2,
+            4
+        ],
+        "image": "4.png",
+        "id": "4"
+    },
+    {
+        "product_name": "Redmi Note 6s",
+        "price": "330.00",
+        "rating": 4,
+        "number_ratings": 29636,
+        "color": [
+            "white",
+            "teal",
+            "blue"
+        ],
+        "produsen": "redmi",
+        "top_sale": false,
+        "answered_quetions": 97312,
+        "size": [],
+        "image": "5.png",
+        "id": "5"
+    },
+    {
+        "product_name": "Redmi Note 7",
+        "price": "360.00",
+        "rating": 2,
+        "number_ratings": 79071,
+        "color": [
+            "orange",
+            "yellow"
+        ],
+        "produsen": "redmi",
+        "top_sale": false,
+        "answered_quetions": 7540,
+        "size": [
+            2
+        ],
+        "image": "6.png",
+        "id": "6"
+    },
+    {
+        "product_name": "Samsung AS2",
+        "price": "305.00",
+        "rating": 5,
+        "number_ratings": 97769,
+        "color": [
+            "black",
+            "teal"
+        ],
+        "produsen": "samsung",
+        "top_sale": true,
+        "answered_quetions": 18854,
+        "size": [
+            4,
+            8,
+            12
+        ],
+        "image": "8.png",
+        "id": "7"
+    },
+    {
+        "product_name": "Samsung S12",
+        "price": "237.00",
+        "rating": 5,
+        "number_ratings": 69301,
+        "color": [
+            "black",
+            "white"
+        ],
+        "produsen": "samsung",
+        "top_sale": true,
+        "answered_quetions": 13432,
+        "size": [
+            4,
+            8,
+            12
+        ],
+        "image": "10.png",
+        "id": "8"
+    },
+    {
+        "product_name": "Samsung Galaxy S9",
+        "price": "694.00",
+        "rating": 5,
+        "number_ratings": 2520,
+        "color": [
+            "white",
+            "black"
+        ],
+        "produsen": "samsung",
+        "top_sale": true,
+        "answered_quetions": 53124,
+        "size": [
+            4,
+            6
+        ],
+        "image": "11.png",
+        "id": "9"
+    },
+    {
+        "product_name": "Samsung Galaxy S7",
+        "price": "851.00",
+        "rating": 4,
+        "number_ratings": 4978,
+        "color": [
+            "brown",
+            "black"
+        ],
+        "produsen": "samsung",
+        "top_sale": false,
+        "answered_quetions": 49733,
+        "size": [
+            2,
+            4
+        ],
+        "image": "12.png",
+        "id": "10"
+    },
+    {
+        "product_name": "Iphone 7",
+        "price": "641.00",
+        "rating": 5,
+        "number_ratings": 9652,
+        "color": [
+            "white",
+            "black"
+        ],
+        "produsen": "apple",
+        "top_sale": true,
+        "answered_quetions": 19295,
+        "size": [
+            2,
+            4
+        ],
+        "image": "13.png",
+        "id": "11"
+    },
+    {
+        "product_name": "Iphone 6",
+        "price": "647.00",
+        "rating": 3,
+        "number_ratings": 99700,
+        "color": [
+            "black"
+        ],
+        "produsen": "apple",
+        "top_sale": false,
+        "answered_quetions": 38750,
+        "size": [
+            2
+        ],
+        "image": "14.png",
+        "id": "12"
+    }
+]

@@ -71,7 +71,7 @@ export const ContainerCategory = styled.div`
 export const CategoryButton = styled.button`
 	border: none;
 	font-size: 0.8em;
-	background-color: #fff;
+	background-color: unset;
 	cursor: pointer;
 
 	@media only screen and (max-width: 768px) {

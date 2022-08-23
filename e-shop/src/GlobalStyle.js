@@ -67,4 +67,9 @@ background: #FFC107;
 	background: #ff522f;
 	background: linear-gradient(to right, #dd2476, #ff512f);
 }
+
+.loading {
+		text-align: center;
+		width: 100vw;
+	}
 `;

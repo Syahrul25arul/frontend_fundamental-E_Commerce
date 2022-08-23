@@ -1,7 +1,7 @@
 import React from "react";
 import { ContainerCart, ContainerTopSale, Hr, Section } from "./TopSale.styles";
 import Cart from "../card_no_border";
-import Product from "../product_cart/";
+import Product from "../product_cart";
 
 function index() {
 	return (
