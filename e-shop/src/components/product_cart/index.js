@@ -10,6 +10,7 @@ function Index({ product_name, price, image, rating, id }) {
 	const toProductDetail = () => {
 		navigate(`/products/${id}`);
 	};
+
 	return (
 		<div onClick={toProductDetail}>
 			<Button>

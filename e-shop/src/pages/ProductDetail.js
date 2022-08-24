@@ -12,7 +12,7 @@ function ProductDetail() {
 	const { id } = useParams();
 
 	const intialState = useRef(true);
-	const initialProductDetail = useRef(true);
+	// const initialProductDetail = useRef(true);
 
 	useEffect(() => {
 		if (data.length < 1 && intialState.current) {
@@ -22,10 +22,7 @@ function ProductDetail() {
 	}, [data.length, getAllProduct]);
 
 	useEffect(() => {
-		if (initialProductDetail.current) {
-			initialProductDetail.current = false;
-			getDetailProduct(id);
-		}
+		getDetailProduct(id);
 	}, [id]);
 	return (
 		<Layouts title={`Product Detail`}>
