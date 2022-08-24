@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import SectionBanner from "../components/section_banner_area";
 import SectionTopSale from "../components/section_top_sale";
 import SectionBannerAdds from "../components/section_banner_adds";
@@ -8,8 +8,10 @@ import { useProducts } from "../hooks/useProductFetch";
 
 function Home() {
 	const [isLoading, data, getAllProduct] = useProducts();
+	const intialState = useRef(true);
 	useEffect(() => {
-		if (data.length < 1) {
+		if (data.length < 1 && intialState.current) {
+			intialState.current = false;
 			getAllProduct(1, 12, "", "");
 		}
 	}, [data.length, getAllProduct]);
