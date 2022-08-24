@@ -7,7 +7,7 @@ function index({ product, loading }) {
 	// console.log(product);
 	return (
 		<Section>
-			<ProductDetail image={product.image} />
+			<ProductDetail image={product.image} loading={loading} />
 			<ProductInfo loading={loading} {...product} />
 		</Section>
 	);

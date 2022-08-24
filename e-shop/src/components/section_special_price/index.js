@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { CategoryButton, ContainerAllCategory, ContainerCategory, ContainerItem, Section } from "./SectionSpecialPrice.styles";
 import CartWithBorder from "../card_with_border";
 import Product from "../product_cart";
+import Spinner from "../spinner";
 
 function Index({ loading, products }) {
 	const [dataProduct, setDataProduct] = useState([]);
@@ -34,7 +35,7 @@ function Index({ loading, products }) {
 			<ContainerItem>
 				{loading ? (
 					<div className="loading">
-						<h5>Loading...</h5>
+						<Spinner />
 					</div>
 				) : (
 					dataProduct.map((product, i) => (

@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { Button, Color, ColorAndQuantity, ColorButton, ContainerItemRating, ContainerSizeButton, Hr, OrderDetail, PolicyIcon, PolicyInfo, PolicyInfoDetail, ProductInfo, Size, SizeButton, TableProduct } from "./ProductInfo.styles";
 import ItemRating from "../items_rating";
 import Qty from "../quantity";
+import Spinner from "../spinner";
 
 function Index({ loading, product_name, produsen, number_ratings, rating, answered_quetions, mrp, price, color, size, save, id }) {
 	useEffect(() => {
@@ -9,7 +10,7 @@ function Index({ loading, product_name, produsen, number_ratings, rating, answer
 	}, [id]);
 	return loading ? (
 		<div className="loading">
-			<h5>Loading...</h5>
+			<Spinner />
 		</div>
 	) : (
 		<ProductInfo>
