@@ -2,9 +2,10 @@ import React from "react";
 import { DetailButton, ProductDetail, ProductImage } from "./ProductDetail.styles";
 import { products } from "../../Images";
 import { ButtonAddToCartDetail, ButtonProcedToBuyDetail } from "../button";
-import Spinner from "../spinner";
+import { useDispatch, useSelector } from "react-redux";
+import { addToCart, selectCart } from "../../container/cartSlice";
 
-function index({ image, loading }) {
+function Index({ image, loading, handleAddServiceToCart }) {
 	return loading ? (
 		""
 	) : (
@@ -12,10 +13,12 @@ function index({ image, loading }) {
 			<ProductImage src={products[image]} />
 			<DetailButton>
 				<ButtonProcedToBuyDetail className={`btn`}>Proceed to Buy</ButtonProcedToBuyDetail>
-				<ButtonAddToCartDetail className={`btn`}>Add to Cart</ButtonAddToCartDetail>
+				<ButtonAddToCartDetail handleAddServiceToCart={handleAddServiceToCart} className={`btn`}>
+					Add to Cart
+				</ButtonAddToCartDetail>
 			</DetailButton>
 		</ProductDetail>
 	);
 }
 
-export default index;
+export default Index;

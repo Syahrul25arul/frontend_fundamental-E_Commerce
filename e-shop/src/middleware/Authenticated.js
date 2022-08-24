@@ -5,7 +5,6 @@ import { selectUser } from "../container/userSlice";
 
 function Authenticated({ children }) {
 	const userStore = useSelector(selectUser);
-	// const [user] = useAuthState(auth);
 	const [isLoggedIn, setIsLoggedIn] = useState(false);
 	const navigate = useNavigate();
 

@@ -4,7 +4,7 @@ import ItemRating from "../items_rating";
 import Qty from "../quantity";
 import Spinner from "../spinner";
 
-function Index({ loading, product_name, produsen, number_ratings, rating, answered_quetions, mrp, price, color, size, save, id }) {
+function Index({ loading, product_name, produsen, number_ratings, rating, answered_quetions, mrp, price, color, size, save, id, handleIncementQuantity, handleDecrementQuantity, quantity }) {
 	useEffect(() => {
 		window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
 	}, [id]);
@@ -96,7 +96,7 @@ function Index({ loading, product_name, produsen, number_ratings, rating, answer
 						))}
 					</ColorButton>
 				</Color>
-				<Qty />
+				<Qty handleIncementQuantity={handleIncementQuantity} handleDecrementQuantity={handleDecrementQuantity} quantity={quantity} />
 			</ColorAndQuantity>
 			<Size>
 				<h6 className="font-baloo">Size :</h6>
