@@ -1,19 +1,39 @@
-import React from "react";
+import React, { useState } from "react";
 import { ButtonCartDelete, CartItemImage, CartItemsInfo, CartItemsPrice, CartSubtotal, ContainerCart, ContainerCartAllItems, ContainerItems, ContainerRating, QtyButtonCart, QtyCart, SectionCart, SubtotalPrice } from "./SectionCart.styles";
 import { products } from "../../Images";
 import ItemRating from "../items_rating";
+import { useCartHooks } from "../../service/useCartHooks";
+import Alert from "../alert";
 
-function index({ cart }) {
+function Index({ cart }) {
+	const { serviceDeleteToCart, alert, showAlert, serviceAddToCart } = useCartHooks();
+
+	const handleIncementQuantity = (id) => {
+		const product = cart.filter((c) => c.id === id);
+		serviceAddToCart({ ...product[0], quantity: 1 });
+	};
+
+	const handleDecrementQuantity = (id) => {
+		const product = cart.filter((c) => c.id === id);
+		if (product[0].quantity > 1) {
+			serviceAddToCart({ ...product[0], quantity: -1 });
+		}
+	};
+
 	const subTotalPrice = cart.reduce((acc, curr) => acc + curr.price * curr.quantity, 0);
+
+	const handleDeleteCart = (id) => {
+		serviceDeleteToCart(id);
+	};
 	return (
 		<SectionCart>
+			{alert.show && <Alert {...alert} removeAlert={showAlert} cls={`mt-20`} />}
 			<h5 className="font-baloo">Shopping Cart</h5>
 			<ContainerCart>
 				<ContainerCartAllItems>
 					{cart.map((c, i) => (
 						<div key={i}>
 							<hr />
-							{console.log(c.quantity)}
 							<ContainerItems>
 								<CartItemImage>
 									<img src={products[c.image]} alt="products" />
@@ -29,15 +49,17 @@ function index({ cart }) {
 									</ContainerRating>
 									<QtyCart>
 										<QtyButtonCart className="font-rale">
-											<button type="button" data-id="pro1">
+											<button type="button" data-id="pro1" onClick={() => handleIncementQuantity(c.id)}>
 												<i className="fas fa-angle-up"></i>
 											</button>
 											<input type="text" data-id="pro1" disabled value={c.quantity} placeholder="1" />
-											<button data-id="pro1">
+											<button data-id="pro1" onClick={() => handleDecrementQuantity(c.id)}>
 												<i className="fas fa-angle-down"></i>
 											</button>
 										</QtyButtonCart>
-										<ButtonCartDelete className="font-baloo">Delete</ButtonCartDelete>
+										<ButtonCartDelete onClick={() => handleDeleteCart(c.id)} className="font-baloo">
+											Delete
+										</ButtonCartDelete>
 									</QtyCart>
 								</CartItemsInfo>
 								<CartItemsPrice>
@@ -68,4 +90,4 @@ function index({ cart }) {
 	);
 }
 
-export default index;
+export default Index;

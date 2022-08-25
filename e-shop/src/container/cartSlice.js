@@ -7,13 +7,15 @@ export const cartSlice = createSlice({
 	},
 	reducers: {
 		addToCart: (state, action) => {
-			console.log(state.cart);
+			state.cart = [...action.payload];
+		},
+		deleteCart: (state, action) => {
 			state.cart = [...action.payload];
 		}
 	}
 });
 
-export const { addToCart } = cartSlice.actions;
+export const { addToCart, deleteCart } = cartSlice.actions;
 
 export const selectCart = (state) => state.cart;
 

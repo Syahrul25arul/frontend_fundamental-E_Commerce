@@ -10,7 +10,6 @@ function Cart() {
 	const [isLoading, data, getAllProduct] = useProducts();
 	const { cart } = useSelector(selectCart);
 	const intialState = useRef(true);
-	const { alert, showAlert } = useCartHooks();
 
 	useEffect(() => {
 		if (data.length < 1 && intialState.current) {
