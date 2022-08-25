@@ -27,7 +27,7 @@ export const DetailButton = styled.div`
 	/* padding: 0 3rem; */
 	font-size: 17px;
 
-	.btn {
+	.button {
 		padding: 8px 0;
 		cursor: pointer;
 		font-size: 0.7em;
@@ -42,7 +42,7 @@ export const DetailButton = styled.div`
 		font-size: 20px;
 		justify-content: space-between;
 
-		.btn {
+		.button {
 			padding: 12px 0;
 			margin-left: 5px;
 			flex: 0.5;

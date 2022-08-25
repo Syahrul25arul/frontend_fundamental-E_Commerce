@@ -12,8 +12,8 @@ function Index({ image, loading, handleAddServiceToCart }) {
 		<ProductDetail>
 			<ProductImage src={products[image]} />
 			<DetailButton>
-				<ButtonProcedToBuyDetail className={`btn`}>Proceed to Buy</ButtonProcedToBuyDetail>
-				<ButtonAddToCartDetail handleAddServiceToCart={handleAddServiceToCart} className={`btn`}>
+				<ButtonProcedToBuyDetail className={`button`}>Proceed to Buy</ButtonProcedToBuyDetail>
+				<ButtonAddToCartDetail handleAddServiceToCart={handleAddServiceToCart} className={`button`}>
 					Add to Cart
 				</ButtonAddToCartDetail>
 			</DetailButton>
