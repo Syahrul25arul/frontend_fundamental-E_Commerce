@@ -104,4 +104,8 @@ background: #FFC107;
 		text-align: center;
 		width: 100vw;
 	}
+
+.mt-20 {
+  margin-top : 20px;
+}
 `;
